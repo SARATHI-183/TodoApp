@@ -1,6 +1,6 @@
 # React + Vite
 
-Check out the live version of the application [here]([https://todo-app-66fd0b.netlify.app/]).
+Check out the live version of the application [here](https://todo-app-66fd0b.netlify.app/).
 
 
 Currently, two official plugins are available:
