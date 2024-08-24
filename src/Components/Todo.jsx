@@ -1,8 +1,14 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import TodoItems from './TodoItems'
 
 const Todo = () => {
-    const [todoList ,SetTodoList]=useState([]);
+    const [todoList ,SetTodoList]=useState(localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")):[]);
+
+    //update lpocal storage
+    useEffect(()=>{
+        localStorage.setItem("todos", JSON.stringify(todoList));
+    },[todoList]);
+
 
     const inputRef = useRef();
     //add new task
